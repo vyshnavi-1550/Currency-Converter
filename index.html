@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Currency Converter</title> 
+<style>
+table {
+      background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20231027/pngtree- hexagonal-abstract-background-with-a-black-textured-surface-image_13704307.png');
+      padding: top 200px; 
+      margin: auto; 
+      border-collapse: collapse;
+}
+th, td {
+      padding: 10px; 
+      text-align: center; 
+      color: brown;
+}
+th {
+     font-size: 18px;
+     font-weight: bold; 
+}
+body{
+     background- image:url('https://as1.ftcdn.net/v2/jpg/02/05/78/28/1000_F_205782839_kxZLF6DlXeFqiShLTKc5UKwVU2OJlM oM.jpg');
+     background-repeat:no-repeat;
+     background-size: cover; 
+}
+</style>
+<script type="text/javascript">
+function calc(clicked_id) 
+{
+var amount = parseFloat(document.getElementById("value1").value); 
+if (isNaN(amount) || amount <= 0) 
+{
+alert("Please enter a valid number.");
+return;
+}
+letconversionRates ={ 
+  us: 0.012,
+  er: 0.011,
+  pd: 0.0094,
+  ca: 0.016, 
+  au: 0.019,
+  ar: 0.045,
+  sr: 0.045,
+  af: 0.22,
+  me: 0.22,
+  br: 0.059,
+  rr: 1.17,
+  ja: 1.76,
+  ch: 0.089,
+  sw: 0.011,
+  si: 0.016,
+};
+var rate = conversionRates[clicked_id];
+document.getElementById("answer").value = (amount * rate).toFixed(2);
+}
+function cls() 
+{ 
+  document.getElementById("value1").value = ""; document.getElementById("answer").value = "";
+} 
+</script>
+</head> 
+<body>
+ <table border="1">
+ <tr><th colspan="4">Currency Converter</th></tr> <tr>
+ <td>Amount:</td>
+ <td colspan="3"><input type="text" id="value1" placeholder="Enter amount in INR" /></td> 
+ </tr>
+ <tr>
+ <td><input type="button" value="USD" id="us" onclick="calc(this.id) " /></td>
+ <td><input type="button" value="EURO" id="er" onclick="calc(this.id) " /></td>
+ <td><input </tr>
+<tr> <td><input type="button" value="POUND" id="pd" onclick="calc(this.id)" /</td>
+</tr>
+<tr>
+<td><input type="button" value="CANADA" id="ca" onclick="calc(this.id)" /></td>
+<td><input type="button" value="AUSTRILIA" id="au" onclick="calc(this.id)" /></td>
+<td><input type="button" value="ARABED"id="ar" onclick="calc(this.id)" /></td>
+</tr>
+<tr>
+<td><input type="button" value="SOUTHAFRICA" id="sr" onclick="calc(this.id)" /></td>
+<td><input type="button" value="NEWZEALAND" id="af" onclick="calc(this.id)" /></td>
+<td><input type="button" value="MEXICON"id="me" onclick="calc(this.id)" /></td>
+</tr
+<tr>
+<td><input type="button" value="BERLIAN" id="br" onclick="calc(this.id)" /></td>
+<td><input type="button" value="RUBE" id="rr" onclick="calc(this.id)" /></td>
+<td><input type="button" value="JAPAN"id="ja" onclick="calc(this.id)" /></td>
+</tr>
+<tr>
+<td><input type="button" value="CHINESE" id="ch" onclick="calc(this.id)" /></td> 
+<td><input type="button" value="CHINA" id="sw" onclick="calc(this.id)" /></td> 
+<td><input type="button" value="SINGAPORE" id="si" onclick="calc(this.id)" /></td>
+</tr>
+<tr>
+</body>
+</html>
